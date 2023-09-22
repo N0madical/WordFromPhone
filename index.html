@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <style>
+        .center {
+            transform: translate(-50%, -50%);
+            position: absolute;
+            left: 50%;
+        }
+    </style>
+    <body style="margin: 0px;">
+        <button type="button" class="center" onclick="findWords()" style="top: 10%; width: 100px; height: 50px;">Find Words</button>
+        <div class="center" style="top: 20%">
+            <p style="position: absolute; width: 1000px; font-size: 60px; transform: translate(-15%, -110%);">(---)- --  -</p>
+            <input id="box1" maxlength="3" type="text" style="width: 50px; height: 25px; text-align: center; position: absolute; transform: translateX(50%); right: 100px">
+            <input id="box2" maxlength="3" type="text" style="width: 50px; height: 25px; text-align: center; position: absolute; transform: translateX(-50%);">
+            <input id="box3" maxlength="4" type="text" style="width: 75px; height: 25px; text-align: center; position: absolute; transform: translateX(-50%); left: 100px">
+        </div>
+        <textarea id="texthere" class="center" style="width: 500px; height: 600px; top: 60%;"></textarea>
+
+        <script src="words.js" defer> </script>
+        <script src="index.js" defer> </script>
+    </body>
+    </html> 
