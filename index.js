@@ -7,12 +7,19 @@ function findWords() {
             document.getElementById('warning').style.color = "black"
             document.getElementById('startbutton').innerHTML = "Running..."
             wordlist = [];
-            for(i = 0; i < 11; i++) {
-                for(j = (i+1); j < 11; j++) {
-                    if(((j-i) >= document.getElementById('minlen').value) && ((j-i) <= document.getElementById('maxlen').value))
-                    wordlist.push(phonenumber.slice(i,j))
+            if(document.getElementById('intact').checked) {
+                wordlist.push(phonenumber.slice(0,3))
+                wordlist.push(phonenumber.slice(3,6))
+                wordlist.push(phonenumber.slice(6,11))
+            } else {
+                for(i = 0; i < 11; i++) {
+                    for(j = (i+1); j < 11; j++) {
+                        if(((j-i) >= document.getElementById('minlen').value) && ((j-i) <= document.getElementById('maxlen').value))
+                        wordlist.push(phonenumber.slice(i,j))
+                    }
                 }
             }
+            console.debug(wordlist)
             q = 0
             offset = 0
             document.getElementById('outputbox').innerHTML = ""

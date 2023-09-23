@@ -38,6 +38,10 @@
                 <p class="center" style="width: 150px; transform: translate(-45%, -200%);">Max Word Length</p>
                 <input type="number" id="maxlen" min="1" max="10" class="center" style="width: 40px; top: 15px;" oninput="validate(this, 1, 10, 1)" value="10">
             </div>
+            <div class="center" style="top: 63%;">
+                <p class="center" style="width: 150px; transform: translate(-40%, -110%);">Only Intact Words</p>
+                <input type="checkbox" id="intact" class="center" style="width: 20px; height:20px; transform: translate(-450%, -50%);">
+            </div>
             <button type="button" id="startbutton" class="center" onclick="findWords()" style="top: 90%; width: 80%; height: 50px; background-color: #75b5f1; font-size: 20px;">Find Words</button>
         </div>
         <h2 style="position: absolute; top: 12%; right: 30%; font-size: 30px;">Possible Words:</h2>
